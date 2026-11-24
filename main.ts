@@ -4,13 +4,13 @@
 import{mkdirSync as A,readdirSync as B,readFileSync as F,writeFileSync as W}from"node:fs";
 function run(p,q){
 const D=new Int32Array(256),C=new Int32Array(64),M=new Int32Array(256),O=new Uint8Array(65536);
-let s=0,c=0,o=0,i=0,x=0,t=0,z=0,w=0,u="";
+let s=0,c=0,o=0,i=0,x=0,t=0,z=0,w=0,u="",L=p.length;
 const P=()=>{if(!s)throw 2;return D[--s]},U=v=>{if(s>255)throw 3;D[s++]=v};
 try{for(;;){
 if(t===1e6)throw 10;
-if(x<0||x>=p.length)throw 9;
+if(x<0||x>=L)throw 9;
 const g=p[x],m=g===1?1:g===2?4:g>=48&&g<52?2:0,n=x+1+m;
-if(n>p.length)throw 9;
+if(n>L)throw 9;
 t++;x=n;
 if(g>15&&g<35&&g!==23&&g!==27&&g!==31){
 const y=P(),a=P();let r;
